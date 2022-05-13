@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="K8Y-IB-xg3" customClass="SearchResultCell" customModule="Cook_Book" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K8Y-IB-xg3" id="1jR-9w-EgZ">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iA6-3f-skw">
+                        <rect key="frame" x="16" y="11" width="60" height="58"/>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="dwJ-Ue-Obr"/>
+                            <constraint firstAttribute="width" constant="60" id="whm-JX-XY7"/>
+                        </constraints>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="thin"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAP-WI-jlq">
+                        <rect key="frame" x="84" y="16" width="275" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Duration (Cook time)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMj-QI-R6J">
+                        <rect key="frame" x="84" y="46" width="275" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" name="ArtistName"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hAP-WI-jlq" firstAttribute="top" secondItem="1jR-9w-EgZ" secondAttribute="top" constant="16" id="1Ed-qt-hVU"/>
+                    <constraint firstAttribute="trailing" secondItem="hAP-WI-jlq" secondAttribute="trailing" constant="16" id="9br-xz-kGy"/>
+                    <constraint firstItem="xMj-QI-R6J" firstAttribute="top" secondItem="hAP-WI-jlq" secondAttribute="bottom" constant="8" id="BbT-ir-cfL"/>
+                    <constraint firstItem="hAP-WI-jlq" firstAttribute="leading" secondItem="iA6-3f-skw" secondAttribute="trailing" constant="8" id="CtL-0s-1oo"/>
+                    <constraint firstAttribute="bottom" secondItem="xMj-QI-R6J" secondAttribute="bottom" constant="16" id="Ojq-33-k66"/>
+                    <constraint firstItem="iA6-3f-skw" firstAttribute="leading" secondItem="1jR-9w-EgZ" secondAttribute="leading" constant="16" id="Zme-bR-uTN"/>
+                    <constraint firstItem="xMj-QI-R6J" firstAttribute="leading" secondItem="iA6-3f-skw" secondAttribute="trailing" constant="8" id="fmX-aA-EDP"/>
+                    <constraint firstItem="iA6-3f-skw" firstAttribute="top" secondItem="1jR-9w-EgZ" secondAttribute="top" constant="10" id="oYe-ij-RLQ"/>
+                    <constraint firstAttribute="trailing" secondItem="xMj-QI-R6J" secondAttribute="trailing" constant="16" id="qWL-fE-hHo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="hAP-WI-jlq" id="QVf-v4-2tH"/>
+                <outlet property="recipeImageView" destination="iA6-3f-skw" id="1af-WN-PBX"/>
+                <outlet property="recipeTimeLabel" destination="xMj-QI-R6J" id="NuS-ed-mpf"/>
+            </connections>
+            <point key="canvasLocation" x="174" y="46"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="square" catalog="system" width="32" height="32"/>
+        <namedColor name="ArtistName">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
